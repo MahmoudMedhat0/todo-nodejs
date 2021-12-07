@@ -21,6 +21,7 @@ app.use('/api',apiRouter)
 
 // error handelres
 app.use((err, req, res, next) => {
+  res.statusCode = err.statusCode;
   res.send(err);
 });
 
